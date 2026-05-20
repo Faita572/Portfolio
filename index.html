@@ -211,6 +211,15 @@
         }
 
         /* About Section */
+        section{
+            padding: 100px 8%;
+            .section-title {
+                font-size: 2.5rem;
+                text-align: center;
+                margin-bottom: 60px;
+                position: relative;
+            }
+        }
         .about-content {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -508,7 +517,16 @@
             }
 
             .nav-links {
-                display: none;
+                position: absolute;
+                top: 60px;
+                right: 20px;
+                background: rgba(10, 10, 10, 0.95);
+                flex-direction: column; 
+                gap: 15px;
+                padding: 15px 20px;
+                transition: all 0.3s ease in-out;
+                border-radius: 15px;
+                opacity: 0;
             }
 
             .hero h1 {
@@ -562,8 +580,8 @@
             <p class="subtitle">Computer Science Engineering Student</p>
             <p class="typing-text" id="typing"></p>
             <div class="cta-buttons">
-                <a href="#projects" class="btn btn-primary">View Projects</a>
-                <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                <a href="#projects" class="btn btn-primary">View My Work</a>
+                <a href="#contact" class="btn btn-secondary">Let's connect</a>
             </div>
         </div>
     </section>
@@ -600,12 +618,12 @@
 
     <!-- Skills Section -->
     <section id="skills">
-        <h2 class="section-title">Skills</h2>
+        <h2 class="section-title">Tech stack</h2>
         <div class="skills-grid">
             <div class="skill-card fade-in">
                 <i class="fa-brands fa-html5"></i>
                 <h3>HTML & CSS</h3>
-                <p>Building structured, semantic, and beautifully styled web pages</p>
+                <p>Building clean and structured web pages</p>
                 <div class="skill-bar">
                     <div class="skill-progress" data-progress="75"></div>
                 </div>
@@ -613,7 +631,7 @@
             <div class="skill-card fade-in">
                 <i class="fa-brands fa-java"></i>
                 <h3>Java</h3>
-                <p>Object-oriented programming and application development</p>
+                <p>Learning object-oriented programming and application development</p>
                 <div class="skill-bar">
                     <div class="skill-progress" data-progress="70"></div>
                 </div>
@@ -621,7 +639,7 @@
             <div class="skill-card fade-in">
                 <i class="fa-brands fa-python"></i>
                 <h3>Python</h3>
-                <p>Scripting, automation, and data manipulation</p>
+                <p>Exploring scripting, automation, and logic building</p>
                 <div class="skill-bar">
                     <div class="skill-progress" data-progress="65"></div>
                 </div>
@@ -637,7 +655,7 @@
             <div class="skill-card fade-in">
                 <i class="fa-solid fa-code"></i>
                 <h3>CSS</h3>
-                <p>Creating visually appealing and responsive web designs</p>
+                <p>Creating responsive and aesthetic designs</p>
                 <div class="skill-bar">
                     <div class="skill-progress" data-progress="60"></div>
                 </div>
@@ -648,10 +666,10 @@
 
     <!-- Projects Section -->
     <section id="projects">
-        <h2 class="section-title">Projects</h2>
+        <h2 class="section-title hidden">Projects</h2>
         <div class="projects-grid">
-            <div class="project-card fade-in">
-                <div class="project-image">
+            <div class="project-card hidden">
+                <div class="project-top">
                     <i class="fa-solid fa-graduation-cap"></i>
                 </div>
                 <div class="project-info">
@@ -659,15 +677,16 @@
                     <p>A comprehensive system to manage student records, grades, and academic information efficiently.</p>
                     <div class="project-tags">
                         <span>Java</span>
-                        <span>Database</span>
+                        <span>OOP</span>
                     </div>
                     <div class="project-links">
-                        <a href="[github.com](https://github.com/Faita572)" target="_blank"><i class="fa-brands fa-github"></i> Code</a>
+                        <a href="https://github.com/Faita572" target="_blank">
+                            <i class="fa-brands fa-github"></i> Github</a>
                     </div>
                 </div>
             </div>
-            <div class="project-card fade-in">
-                <div class="project-image">
+            <div class="project-card hidden">
+                <div class="project-top">
                     <i class="fa-solid fa-calendar-check"></i>
                 </div>
                 <div class="project-info">
@@ -678,7 +697,8 @@
                         <span>Planning</span>
                     </div>
                     <div class="project-links">
-                        <a href="[github.com](https://github.com/Faita572)" target="_blank"><i class="fa-brands fa-github"></i> Code</a>
+                        <a href="https://github.com/Faita572" target="_blank">
+                            <i class="fa-brands fa-github"></i> Github</a>
                     </div>
                 </div>
             </div>
@@ -695,7 +715,8 @@
                         <span>JavaScript</span>
                     </div>
                     <div class="project-links">
-                        <a href="[github.com](https://github.com/Faita572)" target="_blank"><i class="fa-brands fa-github"></i> Code</a>
+                        <a href="https://github.com/Faita572" target="_blank">
+                            <i class="fa-brands fa-github"></i> Github</a>
                     </div>
                 </div>
             </div>
@@ -704,17 +725,17 @@
 
     <!-- Contact Section -->
     <section id="contact">
-        <h2 class="section-title">Get In Touch</h2>
-        <div class="contact-content">
-            <p>I'm always open to discussing new projects, creative ideas, or opportunities to be part of something amazing.</p>
+        <h2 class="section-title hidden">Let's talk</h2>
+        <div class="contact-box hidden">
+            <p>Whether it's projects, collabs, tech or just a random creative idea - my inbox is always open!</p>
             <div class="social-links">
-                <a href="[github.com](https://github.com/Faita572)" target="_blank" title="GitHub">
+                <a href="https://github.com/Faita572" target="_blank" title="GitHub">
                     <i class="fa-brands fa-github"></i>
                 </a>
-                <a href="[linkedin.com](https://www.linkedin.com/in/faith-ngwata-97b1a331a)" target="_blank" title="LinkedIn">
+                <a href="https://www.linkedin.com/in/faith-ngwata-97b1a331a" target="_blank" title="LinkedIn">
                     <i class="fa-brands fa-linkedin-in"></i>
                 </a>
-                <a href="faithngwata059@gmail.com" title="Email">
+                <a href="mailto:faithngwata059@gmail.com" title="Email">
                     <i class="fa-solid fa-envelope"></i>
                 </a>
             </div>
